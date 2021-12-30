@@ -1,0 +1,7 @@
+---
+# tasks file for ansible_role_mariadb_database_import
+
+- name: Databases import
+  #shell: mysqldump -E -R -u "{{ ansible_role_mariadb_database_dump_mysql_user }}" -p"{{ ansible_role_mariadb_database_dump_mysql_password }}" -h "{{ ansible_role_mariadb_database_dump_mysql_host }}" --single-transaction --databases "{{ ansible_role_mariadb_database_dump_db }}" > {{ ansible_role_mariadb_database_dump_backup_path }}
+  #shell: mysql -u "{{ ansible_role_mariadb_database_import_mysql_user }}" -p"{{ ansible_role_mariadb_database_import_mysql_password }}" < {{ ansible_role_mariadb_database_dump_backup_path }}
+  shell: mysql < {{ ansible_role_mariadb_database_import_backup_path }}

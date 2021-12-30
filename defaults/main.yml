@@ -1,0 +1,8 @@
+---
+# defaults file for ansible_role_mariadb_database_import
+
+ansible_role_mariadb_database_import_mysql_user: admin
+ansible_role_mariadb_database_import_mysql_password: admin
+#ansible_role_mariadb_database_import_mysql_host: 127.0.0.1
+#ansible_role_mariadb_database_import_db: test
+ansible_role_mariadb_database_import_backup_path: "~/{{ ansible_role_mariadb_database_import_db }}.sql"
